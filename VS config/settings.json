@@ -1,0 +1,63 @@
+{
+    "git.confirmSync": false,
+    "terminal.integrated.env.windows": {},
+    "console-ninja.featureSet": "Community",
+    "workbench.productIconTheme": "fluent-icons",
+    "symbols.hidesExplorerArrows": false,
+    "workbench.iconTheme": "symbols",
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "editor.formatOnSave": true,
+    "workbench.sideBar.location": "right",
+    "git.enableSmartCommit": true,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Windows PowerShell": {
+            "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+    "editor.fontFamily": "\"DaddyTimeMono Nerd Font Mono\",Consolas, 'Courier New', monospace",
+    "editor.cursorStyle": "line-thin",
+    "editor.cursorBlinking": "expand",
+    "editor.fontLigatures": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.smoothScrolling": true,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 33,
+    "editor.renderLineHighlight": "gutter",
+    "editor.renderWhitespace": "none",
+    "editor.tabSize": 4,
+    "editor.wordWrap": "on",
+    "workbench.editor.labelFormat": "short",
+    "editor.semanticHighlighting.enabled": true,
+    "breadcrumbs.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    // "workbench.statusBar.visible": false,
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    
+}
