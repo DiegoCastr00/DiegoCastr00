@@ -1,18 +1,6 @@
 <h1 align="center">Hi 👋, I'm Diego</h1>
 <h3 align="center">Artificial Intelligence engineering student</h3>
 
-###
-
-- 🔭 I’m currently working on [Chatify](https://github.com/DiegoCastr00/Chatify)
-
-- 🌱 I’m currently learning **Nextjs, TensorFlow, Ollama, Astro**
-
-- 📝 I regularly write articles on [https://medium.com/@diego.castro.elvira](https://medium.com/@diego.castro.elvira)
-
-- 📫 How to reach me **diego.castro.elvira@gmail.com**
-
-###
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/castro-elvira-diego-314b8a285" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="castro-elvira-diego-314b8a285" height="30" width="40" /></a>
