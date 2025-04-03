@@ -8,7 +8,7 @@
 ###
 
 <div align="center">
-  <a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats.herokuapp.com?user=DiegoCastr00&theme=dark&border_radius=2&short_numbers=true" alt="GitHub Streak" /></a>
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=DiegoCastr00&theme=dark&border_radius=1&short_numbers=true)](https://git.io/streak-stats)
 </div>
 
 ###
