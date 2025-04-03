@@ -8,7 +8,7 @@
 ###
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=DiegoCastr00&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5&order=3" height="220" alt="streak graph"  />
+  <a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats.herokuapp.com?user=DiegoCastr00&theme=dark&border_radius=2&short_numbers=true" alt="GitHub Streak" /></a>
 </div>
 
 ###
