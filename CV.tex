@@ -1,0 +1,366 @@
+%
+%Academic CV LaTeX Template
+% Author: Dubasi Pavan Kumar
+% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: pavankumard.pg19.ma@nitp.ac.in
+%
+
+
+
+\documentclass[a4paper,11pt]{article}
+
+% Configuración para mejor copia de texto
+\usepackage{ifxetex,ifluatex}
+\ifxetex
+  \usepackage{fontspec}
+  \setmainfont{Latin Modern Roman}
+\else
+  \ifluatex
+    \usepackage{fontspec}
+    \setmainfont{Latin Modern Roman}
+  \else
+    \usepackage{cmap}
+    \usepackage[T1]{fontenc}
+    \usepackage{lmodern}
+    \input glyphtounicode.tex
+    \pdfgentounicode=1
+  \fi
+\fi
+
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+
+\usepackage{fontawesome5}
+
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% Configuración mejorada para copia de texto
+\usepackage{selnolig}
+\usepackage{accsupp}
+
+% Configuración específica para mejorar copia de texto
+
+% Configuración de microtype más agresiva
+\microtypesetup{
+    tracking=true,
+    kerning=true,
+    spacing=true,
+    factor=1100,
+    stretch=20,
+    shrink=20
+}
+
+% Evitar saltos de línea problemáticos
+\tolerance=1414
+\hbadness=1414
+\emergencystretch=1.5em
+\hfuzz=0.3pt
+\widowpenalty=9999
+\vfuzz=\hfuzz
+\raggedbottom
+
+
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+    pdfencoding=auto,
+    psdextra,
+    pdfpagemode=UseNone,
+    pdfstartview=FitH,
+    pdfcreator={LaTeX},
+    pdfproducer={pdfTeX},
+    pdftex,
+    unicode=true
+}
+
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}\footnotesize}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]\footnotesize}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% Macro para copiar párrafos sin saltos de línea añadidos por el visor PDF
+\newcommand{\copyablepar}[1]{%
+\BeginAccSupp{method=escape,ActualText={#1}}#1\EndAccSupp{}
+}
+
+% Font options
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+
+\begin{document}
+\headerfontiii
+
+% Configuración adicional para mejorar copia de texto
+
+% Header
+\begin{center}
+    {\huge\textbf{Castro Elvira Diego}}
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+   Ingeniero en Inteligencia Artificial y Científico de Datos
+    }
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    +52 2411081478 | \href{diego.castro.elvira@gmail.com}{diego.castro.elvira@gmail.com} | 
+    \socialicon{\faLinkedin} \href{https://www.linkedin.com/in/diego-castro-elvira/}{diego-castro-elvira} | 
+    \socialicon{\faGithub} \href{https://github.com/DiegoCastr00}{DiegoCastr00} 
+    }
+\end{center}
+
+
+\vspace{-4mm}
+
+\section{\textbf{Perfil Profesional}}
+\vspace{1mm}
+\footnotesize{
+Ingeniero en Inteligencia Artificial especializado en ciencia de datos, con experiencia en visión computacional, NLP y modelado de series de tiempo. Experto en el ciclo de vida completo de modelos: desde el procesamiento de datos hasta el entrenamiento, evaluación y despliegue en la nube. Aplicación de técnicas avanzadas de deep learning (fine-tuning, aprendizaje por transferencia, aprendizaje contrastivo) y modelado estadístico para resolver problemas complejos con impacto real.}
+\vspace{-2mm}
+
+
+
+\section{\textbf{Experiencia Profesional}}
+\vspace{-0.4mm}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {{LatGotLab [\href{https://latgoblab.com/}{\faIcon{globe}}]}}{México, híbrido}
+      {{ Noosfera [\href{https://noosfera.ai/}{\faIcon{globe}}]}}{Julio 2024 – Agosto 2025}
+      \resumeItemListStart
+        \item Desarrollé una biblioteca de Recuperación Aumentada con Generación (RAG) para consulta inteligente de libros y documentos, integrando modelos de lenguaje para responder en lenguaje natural.
+        \item Lidero el desarrollo de Noosfera, aplicación móvil en React Native con clasificación automática de imágenes mediante modelos de IA, geolocalización y visualización de eventos en un mapa interactivo.
+        \item Implementé un pipeline completo de IA para descripción y categorización de imágenes, conectado a una base de datos y APIs para su publicación en un feed dinámico priorizado por proximidad geográfica.
+      \resumeItemListEnd 
+  \resumeSubheading
+    {Centro de Innovación y Desarrollo Tecnológico en Cómputo, IPN [\href{https://www.cidetec.ipn.mx/}{\faIcon{globe}}]}{Remoto}
+    {Asistente de investigación}{Abril 2025 - Julio 2025}
+    \resumeItemListStart
+    \item Etiqueté imágenes con Roboflow para modelos de detección de objetos (\texttt{person}, \texttt{backpack}, \texttt{bag}).
+      \item Aseguré la consistencia y calidad del dataset, optimizando su preparación para entrenamiento de modelos de visión por computadora.
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Proyectos Destacados}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Modelo de similitud entre arte original y generado con IA}
+  {Tools: PyTorch, Transformers, BLIP-2, LLaMA 3, Stable Diffusion, OpenCV, Pandas, CUDA, Multiprocessing}
+  {Diciembre 2024 - Abril 2025}
+  {{}\href{https://github.com/DiegoCastr00/CalculoSimilitud/tree/master}{\textcolor{darkblue}{\faGithub}}}
+\resumeItemListStart
+  \item Implementé una red siamesa basada en CLIP y capas proyectivas para medir similitud semántico-visual entre arte humano y generado con Stable Diffusion XL.
+  \item Creé un dataset de 80k imágenes con descripciones BLIP-2 y prompts diversificados con LLaMA 3 y BART.
+  \item Diseñé un pipeline de entrenamiento con estrategia de tripletas, pérdida contrastiva e InfoNCE, evaluado mediante Triplet Accuracy y métricas de similitud coseno en entorno multi-GPU, logrando alta discriminación entre pares similares y no relacionados.
+\resumeItemListEnd
+
+\resumeProject
+  {Detección de emociones en imágenes}
+  {Tools: Python, OpenCV, TensorFlow/Keras, NumPy, Matplotlib, CK+, FER2013.}
+  {Abril 2024 – Junio 2024}
+  {{}\href{https://github.com/DiegoCastr00/DeteccionEmociones}{\textcolor{darkblue}{\faGithub}}}
+\resumeItemListStart
+  \item Implementé un modelo de clasificación de emociones faciales (ira, disgusto, miedo, felicidad, tristeza, sorpresa, neutralidad) usando CNNs y descriptores HOG, SIFT y LBP.
+  \item Entrené y evalué el modelo con datasets CK+ y FER2013, alcanzando hasta 98.47\% de precisión en entornos controlados (CK+). Analicé el impacto del balance y consistencia de datos en el rendimiento, identificando sesgos y problemas de generalización.
+\resumeItemListEnd
+
+\resumeProject
+  {Análisis y Simulación de Series Temporales con Modelos ARMA}
+  {Tools: Python, NumPy, Pandas, Matplotlib, Statsmodels}
+  {Enero 2024 – Febrero 2024}
+  {{}\href{https://github.com/DiegoCastr00/Machine_Learning/blob/master/Practica_9_ARMA/ARMA.ipynb}{\textcolor{darkblue}{\faGithub}}}
+\resumeItemListStart
+  \item Desarrollé y simulé series temporales utilizando modelos Autoregresivos (AR) y de Media Móvil (MA) de órdenes 1 y 2.
+  \item Analicé sistemáticamente el impacto de los coeficientes del modelo ($\phi$ y $\theta$) en el comportamiento de las series, evaluando su efecto en la volatilidad, tendencia y persistencia de la autocorrelación.
+  \item Utilicé funciones de autocorrelación (ACF) para interpretar la estructura de dependencia temporal, validando cómo los parámetros de los modelos AR y MA determinan los patrones subyacentes en los datos.
+\resumeItemListEnd
+
+
+\section{\textbf{Educación}}
+
+\resumeProject
+{Unidad Profesional Interdisciplinaria en Ingeniería Campus Tlaxcala IPN}{Tlaxcala, México}
+{Ingeniería en Inteligencia Artificial}{Junio 2021 - Junio 2025}
+
+
+\vspace{-3mm}
+
+\resumeSubHeadingListEnd
+
+
+\section{\textbf{Competencias y Habilidades Técnicas}}
+\vspace{-0.4mm}
+\resumeHeadingSkillStart
+
+%--- IDIOMAS Y LOGROS (Ligeramente ajustado para mayor claridad) ---
+\resumeSubItem{Idiomas:}
+  {Español (Nativo) · Inglés (B2 - Profesional Intermedio, lectura técnica fluida)}
+
+\resumeSubItem{Logros Clave:}
+  {1° lugar – Hackathon Interno IPN (2023) · 2° lugar – Mobility Hackathon (2024) · Participación destacada – Enactus México (2025)}
+
+%--- HABILIDADES TÉCNICAS (Reorganizado para ATS y claridad) ---
+\resumeSubItem{Áreas de Especialidad:}
+  {Ciencia de Datos · Visión por Computadora (CV) · Procesamiento de Lenguaje Natural (NLP) · Análisis de Series Temporales · Machine Learning Ops (MLOps)}
+
+\resumeSubItem{Modelado y Técnicas:}
+  {Deep Learning (Arquitecturas Transformer, CNNs, RNNs) · Modelado Estadístico y Predictivo · Fine-Tuning y Transfer Learning · Retrieval-Augmented Generation (RAG) · Aprendizaje por Refuerzo (RL)}
+
+\resumeSubItem{Lenguajes y Datos:}
+  {Python · SQL · TypeScript · Bash · YAML}
+
+\resumeSubItem{Librerías y Ecosistema de IA:}
+  {PyTorch · TensorFlow/Keras · Hugging Face (Transformers, Datasets) · Scikit-learn · LangChain · OpenCV · Pandas · NumPy · Polars · Statsmodels}
+
+\resumeSubItem{Plataformas y MLOps:}
+  {AWS (S3, EC2, SageMaker) · Docker · Kubernetes (K8s) · Git · CI/CD (GitHub Actions) · Wandb · MLflow · Vector DBs (FAISS, ChromaDB, Pinecone)}
+
+\resumeSubItem{Desarrollo y Visualización:}
+  {FastAPI · Node.js · React · Next.js · Power BI · Matplotlib · Seaborn}
+
+%--- HABILIDADES ESTRATÉGICAS (Enfocadas en impacto de negocio) ---
+\resumeSubItem{Habilidades Estratégicas:}
+  {Liderazgo Técnico y Mentoría · Gestión de Proyectos (Agile/Scrum) · Análisis Exploratorio de Datos (EDA) · Ética en IA y Gobernanza de Datos · Resolución de Problemas Complejos}
+
+\resumeHeadingSkillEnd
+
+\end{document}
